@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css";
-import Header from "../Header"
-import Photo from "../Photo"
-import image from "./assets/Self_at_Zion.JPG";
-import CardTitle from "../CardTitle"
+import Header from "../Header";
+import Photo from "../Photo";
+import CardTitle from "../CardTitle";
 import CardText from "../CardText";
+import Link from "../Link";
 
 function Card(props) {
   return (
@@ -16,21 +16,30 @@ function Card(props) {
         <div className="row clearfix">
           <summary className="col-md-12">
             <Photo
-              photo={image} 
+              photo={props.image} 
               alt="Placeholder"
               class="img-thumbnail img-fluid float-left mr-3"
-              style={{width: "200px", height: "200px"}}
+              style={props.imgStyle}
             />
             <CardTitle
               title={props.subtitle}
               link={props.link}
               project={props.project}
               text={props.text}
-              class={props.class}
+              class={props.h6Class}
             />
             <CardText
               text={props.text}
             />
+            {props.buttons.map((props) => (
+              <Link
+              link={props.link}
+              download={props.download}
+              btnClass={props.btnclass}
+              iconClass={props.iconClass}
+              buttonText={props.btnText}
+            />
+            ))}  
           </summary>
         </div>
       </div>
