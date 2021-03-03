@@ -4,8 +4,7 @@ import "./style.css";
 
 function CardTitle(props) {
   return (
-    <h6 className={`card title text-center ${props.class}`}>
-      {props.title}
+    <h6 className={`text-center ${props.class}`}>
       <a
         href={props.link}
       >

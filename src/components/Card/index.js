@@ -13,35 +13,37 @@ function Card(props) {
         <Header 
         title={props.title}
         />
-        <div className="row clearfix">
-          <summary className="col-md-12">
-            <Photo
-              photo={props.image} 
-              alt="Placeholder"
-              class="img-thumbnail img-fluid float-left mr-3"
-              style={props.imgStyle}
-            />
-            <CardTitle
-              title={props.subtitle}
-              link={props.link}
-              project={props.project}
-              text={props.text}
-              class={props.h6Class}
-            />
-            <CardText
-              text={props.text}
-            />
-            {props.buttons.map((props) => (
-              <Link
-              link={props.link}
-              download={props.download}
-              btnClass={props.btnclass}
-              iconClass={props.iconClass}
-              buttonText={props.btnText}
-            />
-            ))}  
-          </summary>
-        </div>
+        {props.cardInfo.map((props) => (
+          <section className={props.secClass}>
+            {props.cardInfoDetail.map((props) => (
+              <aside className={props.sumClass}>
+              <CardTitle
+                link={props.h6Link}
+                project={props.h6Project}
+                class={props.h6Class}
+              />
+              <Photo
+                photo={props.image} 
+                alt="Placeholder"
+                class={props.imgClass}
+                style={props.imgStyle}
+              />
+              <CardText
+                text={props.text}
+              />
+              {props.buttons.map((props) => (
+                <Link
+                link={props.link}
+                download={props.download}
+                btnClass={props.btnclass}
+                iconClass={props.iconClass}
+                buttonText={props.btnText}
+              />
+              ))}  
+            </aside>
+            ))}
+          </section>
+        ))}
       </div>
     </div>
   );

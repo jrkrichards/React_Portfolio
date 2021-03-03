@@ -6,34 +6,134 @@ import Wrapper from "../../components/Wrapper";
 import Row from "../../components/Row";
 import Card from "../../components/Card";
 import Col from "../../components/Col";
+import RecipeImg from "./assets/home_page_demo.gif"
+import DogImg from "./assets/dogblog-start.PNG"
+import BurgerImg from "./assets/burger-start.PNG"
+import NoteImg from "./assets/home_page - Note.PNG"
+import FtImg from "./assets/ft_dashboard.PNG"
+import EdImg from "./assets/ee_dir.PNG"
 
 const Projects = () => {
-    const [projectInfo, setProjectInfo] = useState([
+    const [projectInfo] = useState([
         {
             title: "Projects",
-            image: "",
-            imgStyle:"",
-            h6Class: "d-none",
-            text: "My name is Jason. I was born and raised in Honolulu, Hawaii. I left the islands to pursue a career in business and to see what life outside of the islands was like. I received my bachelors and masters in Accounting from the University of Nevada, Las Vegas and had the opportunity to work with PricewaterhouseCoopers (PwC) after college. While at PwC I obtained a bredth of knowledge and experience in accounting, finance, business processes, controls, and project management while working on public and private clients in the utility, gaming, travel, and manufacturing industries. During this time I was exposed to many technologies and became intrigued by how these technologies could help solve problems while making our everyday work more efficient and effective. This curiosity led me to seek more knowledge around coding specific to technologies that help with data analysis (Python & Tableau) as well as web development, which is why I enrolled in the bootcamp at UC Berkeley. During the bootcamp I have obtained knowledge that I can implement in my current Finance role to help drive better story telling around the business and implement more cross-functional process automation through the use of systems.",
-            buttons: [
+            cardInfo:[
                 {
-                link:"./assets/Jason Richards' Resume_01282021.pdf",
-                download:"Jason Richards' Resume",
-                btnClass:"btn-git text-center",
-                iconClass:"fas fa-user-tie pr-1 text-center",
-                btnText:"Resume"
+                    secClass:"row my-5",
+                    cardInfoDetail: [
+                        {
+                            sumClass:"col-md-6",
+                            h6Class: "",
+                            h6Project:"Recipe Generator",
+                            h6Link:"https://jrkrichards.github.io/Food_Application/",
+                            image: RecipeImg,
+                            imgClass:"img-thumbnail img-fluid img-responsive my-2",
+                            imgStyle: {width: "auto", height: "auto"},
+                            text: "Recipe Pal was created to help users not only find delicious recipes but to also be able to see what ingredients are required to cook the recipe and what grocery stores are near by. To access the repo click on the github logo below.",
+                            buttons: [
+                                {
+                                link:"https://github.com/jrkrichards/Food_Application",
+                                btnClass:"btn-git text-center",
+                                iconClass:"fab fa-github pr-1 text-center"
+                                }
+                            ]
+                        },
+                        {
+                            sumClass:"col-md-6",
+                            h6Class: "",
+                            h6Project:"Fitness Tracker",
+                            h6Link:"https://evening-taiga-21966.herokuapp.com/",
+                            image: FtImg,
+                            imgClass:"img-thumbnail img-fluid img-responsive my-2",
+                            imgStyle: {width: "auto", height: "auto"},
+                            text: "This is a full stack application that allows the user to track thier workouts and see a summary dashboard of their progress. This application utilizes a mongodb database and allows a user to create a new workout, read the database, and update an existing workout through mongoose.",
+                            buttons: [
+                                {
+                                link:"https://github.com/jrkrichards/Fitness-Tracker",
+                                btnClass:"btn-git text-center",
+                                iconClass:"fab fa-github pr-1 text-center"
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
-                link:"/projects",
-                btnClass:"btn-li text-center",
-                iconClass:"fas fa-code pr-1 text-center",
-                btnText:"Projects"
+                    secClass:"row my-5",
+                    cardInfoDetail: [
+                        {
+                            sumClass:"col-md-6",
+                            h6Class: "",
+                            h6Project:"Dog Blog",
+                            h6Link:"https://dog-blog-app.herokuapp.com/",
+                            image: DogImg,
+                            imgClass:"img-thumbnail img-fluid img-responsive my-2",
+                            imgStyle: {width: "auto", height: "auto"},
+                            text: "This is a full stack application themed around a dog blog. This application has CRUD functionality and utilizes the Sequelize ORM. Further this application allows users to create accounts and will present all blog posts those users made on their account page. Lastly there is a google map API that shows the user nearby parks.",
+                            buttons: [
+                                {
+                                link:"https://github.com/jrkrichards/dog_blog",
+                                btnClass:"btn-git text-center",
+                                iconClass:"fab fa-github pr-1 text-center"
+                                }
+                            ]
+                        },
+                        {
+                            sumClass:"col-md-6",
+                            h6Class: "",
+                            h6Project:"Eat-Da-Burger",
+                            h6Link:"https://afternoon-castle-58595.herokuapp.com/",
+                            image: BurgerImg,
+                            imgClass:"img-thumbnail img-fluid img-responsive my-2",
+                            imgStyle: {width: "auto", height: "auto"},
+                            text: "This application is burger logger which shows the burgers that are waiting to be devoured and which ones have been devoured. This application utilizes node & express, to set up our backend server and create routes, mysql, to query and write to the database, and handlebars, to render our data to the front end.",
+                            buttons: [
+                                {
+                                link:"https://github.com/jrkrichards/Burger",
+                                btnClass:"btn-git text-center",
+                                iconClass:"fab fa-github pr-1 text-center"
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
-                link:"/contact",
-                btnClass:"btn-li text-center",
-                iconClass:"fas fa-at pr-1 text-center",
-                btnText:"Contact"
+                    secClass:"row my-5",
+                    cardInfoDetail: [
+                        {
+                            sumClass:"col-md-6",
+                            h6Class: "",
+                            h6Project:"Employee Directory",
+                            h6Link:"https://jrkrichards.github.io/Employee-Directory/",
+                            image: EdImg,
+                            imgClass:"img-thumbnail img-fluid img-responsive my-2",
+                            imgStyle: {width: "auto", height: "auto"},
+                            text: "This application is an employee directory that allows the user to view non-sensitive data about randomly generated employees, sort employees by their age, filter the employee list by gender. This application utilizes React, Bootstrap, and the randomuser API to generate random employees.",
+                            buttons: [
+                                {
+                                link:"https://github.com/jrkrichards/Employee-Directory",
+                                btnClass:"btn-git text-center",
+                                iconClass:"fab fa-github pr-1 text-center"
+                                }
+                            ]
+                        },
+                        {
+                            sumClass:"col-md-6",
+                            h6Class: "",
+                            h6Project:"Note Taker",
+                            h6Link:"https://note-taker-jrkr.herokuapp.com/",
+                            image: NoteImg,
+                            imgClass:"img-thumbnail img-fluid img-responsive my-2",
+                            imgStyle: {width: "auto", height: "auto"},
+                            text: "This application allows the users to save notes to the backend using express and node.js. When the user clicks the save icon the note will save to the db. When the user wants to view previously saved notes they can click on the titles. When a user want to write new note they can click the pen to change the form from read-only to writeable.",
+                            buttons: [
+                                {
+                                link:"https://github.com/jrkrichards/Notetaker",
+                                btnClass:"btn-git text-center",
+                                iconClass:"fab fa-github pr-1 text-center"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]           
         }
@@ -48,9 +148,7 @@ const Projects = () => {
                 {projectInfo.map((props) => (
                     <Card
                     title={props.title}
-                    h6Class={props.h6Class}
-                    text={props.text}
-                    buttons={props.buttons}
+                    cardInfo={props.cardInfo}
                 />
                 ))}
                 </Col>

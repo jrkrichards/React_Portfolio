@@ -12,3 +12,8 @@
   padding: 3px;
   background: #b8b8b8;
 }
+
+/* Start of footer styling */
+#sticky-footer {
+  flex-shrink: 0;
+}
