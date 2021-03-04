@@ -54,7 +54,7 @@ const Home = () => {
         <div>
             <Navbar />
             <Wrapper>
-            <div id="page-content">
+            <div>
                 <div className="p-5 container text-center top-buffer">
                     <Row>
                         <Col size="md-12">

@@ -3,7 +3,7 @@ import "./style.css";
 
 function Footer() {
   return (
-    <footer id="sticky-footer"className="footer py-4 bg-dark text-white">
+    <footer className="footer py-4 bg-dark text-white">
       <div className="container text-center">
         <small>
           <a href="https://github.com/jrkrichards">

@@ -140,7 +140,7 @@ const Projects = () => {
     ])
     return (
         <div>
-            <Navbar />
+            <Navbar/>
             <Wrapper>
             <div className="p-5 container text-center top-buffer">
             <Row>
